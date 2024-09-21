@@ -23,6 +23,21 @@ header {
   width: 100%;
 }
 
+div.crew {
+  background-image: url(./assets/crew/background-crew-desktop.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+}
+
+div.tech {
+  background-image: url(./assets/technology/background-technology-desktop.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+}
 div.navbar {
   display: flex;
   align-items: center;
@@ -90,11 +105,42 @@ div.content {
   margin-top: 50px;
 }
 
+div.content2 {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 50px 160px;
+  margin-top: 50px;
+}
+
+div.content3 {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 50px 160px;
+  margin-top: 50px;
+}
+div.job {
+  padding: 0px 160px;
+}
+
 div.content-mars {
   gap: 200px;
 }
 
 div.left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+div.left2 {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+div.left3 {
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -110,6 +156,77 @@ div.left h2 {
   margin-bottom: 20px;
 }
 
+div.left2 h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+div.left2 h2 {
+  font-size: 1.5rem;
+  color: whitesmoke;
+  margin-bottom: 20px;
+  color: rgb(134, 134, 134); /* Semi-transparent background */
+}
+
+div.left3 h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+div.left3 h2 {
+  font-size: 1.5rem;
+  color: whitesmoke;
+  margin-bottom: 20px;
+  color: rgb(134, 134, 134); /* Semi-transparent background */
+}
+
+div.job span {
+  color: rgb(134, 134, 134);
+}
+
+div.circles {
+  margin-top: 50px;
+  display: inline-flex;
+  gap: 20px;
+}
+
+div.circle {
+  background-color: rgb(134, 134, 134);
+  width: 20px;
+  height: 20px;
+
+  border-radius: 50%;
+}
+
+div.circle1 {
+  border:1px solid rgb(134, 134, 134);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+  color: white;
+  background-color: transparent;
+}
+
+div.circles .active {
+  background-color: white;
+}
+
+div.circles1 .active {
+  background-color: white;
+  color: black;
+}
+
+div.left3 p{
+  width: 400px;
+}
+div.crew-inner img,
+div.tech-inner img {
+  width: 400px;
+}
 div.right div.explore {
   display: flex;
   align-items: center;
@@ -152,16 +269,21 @@ div.links {
 }
 
 div.links ul {
-    display: flex;
-    list-style: none;
+  display: flex;
+  list-style: none;
 }
-div.links a {
+div.links button {
   margin-right: 25px;
-  font-size: 18px;
+  font-size: 15px;
   position: relative;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
 }
 
-div.links a.active2::after {
+div.links button.active2::after {
   position: absolute;
   content: "";
   display: block;
@@ -192,39 +314,59 @@ div.destination {
   margin-top: 20px;
   margin-left: 100px;
 }
+
+.mars-left h3 {
+  font-size: 1.5rem;
+}
 @media screen and (max-width: 1300px) {
   hr.home {
     display: none;
   }
-  div.content {
+  div.content,
+  div.job {
     padding: 50px 50px;
   }
-  div.destination{
+  div.content2,div.content3 {
+    padding: 50px 50px;
+    margin-top: 50px;
+  }
+  div.destination {
     height: 150vh;
   }
-  div.content-mars{
+  div.crew,div.tech {
+    height: 150vh;
+  }
+  div.content-mars {
     display: block;
     text-align: center;
     margin: 0 auto;
   }
   .moon {
-  width: 350px;
-  margin-top: 20px;
-  margin-left: 0px;
-}
+    width: 350px;
+    margin-top: 20px;
+    margin-left: 0px;
+  }
 
-.mars-left{
+  .mars-left {
     text-align: center;
-    width: 100%;	
+    width: 100%;
     margin: 0 auto;
-}
+  }
 
-div.links{
+  div.links {
     margin: 0 auto;
     text-align: center;
     display: inline-flex;
     margin-bottom: 10px;
-}
+  }
+
+    div.circles1{
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    gap: 20px;
+
+  }
 }
 
 @media screen and (max-width: 840px) {
@@ -287,6 +429,13 @@ div.links{
     margin: 0 auto;
   }
 
+  div.content2,div.content3 {
+    display: block;
+    text-align: center;
+    padding: 50px 20px;
+    margin-top: 0 auto;
+  }
+
   div.right div.explore {
     display: flex;
     align-items: center;
@@ -300,8 +449,40 @@ div.links{
     margin-bottom: 50px;
   }
 
+  div.left2,div.left3 {
+    width: 100%;
+    display: block;
+    margin-bottom: 50px;
+  }
+
   div.left p {
     width: 100%;
     padding: 0px 10px;
+  }
+  div.left2 p {
+    width: 100%;
+    padding: 0px 10px;
+  }
+
+  div.left3 p{
+  width: 100%;
+}
+
+  div.job {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+  }
+
+    div.circles1{
+    text-align: center;
+    margin: 0 auto;
+    display: inline-flex;
+    gap: 20px;
+
+  }
+
+  div.tech-inner img,div.crew-inner img{
+    width: 100%;
   }
 }
